@@ -1,12 +1,17 @@
 import React from "react";
 
-function ProjectItem({ name, about, technologies }) {
+
+function ProjectItem({  name, about, technologies }) {
+  const technologyObj = technologies.map(technology => {
+    console.log(technology)
+    return <span>{technology}</span>
+  })
   return (
-    <div className="project-item">
+    <div className="newProject-item">
       <h3>{name}</h3>
       <p>{about}</p>
       <div className="technologies">
-        {/* render a <span> for each technology in the technologies array */}
+        {technologyObj}
       </div>
     </div>
   );
